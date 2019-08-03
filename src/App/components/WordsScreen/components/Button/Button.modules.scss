@@ -1,0 +1,25 @@
+@import 'styles/mixins';
+@import 'styles/constants';
+@import 'styles/includeMedia';
+
+.button {
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include absoluteCenter;
+
+  border-radius: 50%;
+
+  @include square(200px);
+  font-size: 40px;
+  font-weight: 700;
+  color: $white;
+
+  @include media('<=tablet') {
+    @include square(150px);
+    font-size: 25px;
+  }
+}

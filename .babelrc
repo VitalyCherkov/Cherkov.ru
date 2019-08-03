@@ -1,0 +1,36 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": { "browsers": ["last 2 chrome versions"] },
+      "useBuiltIns": "usage",
+      "corejs": 3
+    }],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "react-css-modules",
+      {
+        "filetypes": {
+          ".scss": {
+            "syntax": "postcss-scss",
+            "plugins": [
+              "postcss-nested"
+            ]
+          }
+        },
+        "generateScopedName": "[local]___[hash:base64:5]",
+        "webpackHotModuleReloading": true,
+        "autoResolveMultipleImports": true
+      }
+    ],
+    "@babel/plugin-proposal-export-default-from",
+    ["@babel/plugin-proposal-decorators", {
+      "legacy": true
+    }],
+    ["@babel/plugin-proposal-class-properties", {
+      "loose": true
+    }]
+  ]
+}

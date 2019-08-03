@@ -1,0 +1,18 @@
+@mixin font($font-family, $font-weight, $name, $font-style: normal) {
+  font-family: $font-family;
+  src: url('./fonts/#{$font-family}-#{$name}.woff2') format('woff2');
+  font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+@font-face {
+  @include font('Roboto', 400, 'Regular');
+}
+
+@font-face {
+  @include font('Roboto', 700, 'Bold');
+}
+
+@font-face {
+  @include font('Roboto', 900, 'BlackItalic', italic);
+}

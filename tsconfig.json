@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "jsx": "react",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "module": "es2015",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": false,
+    "target": "es5",
+    "baseUrl": "src",
+    "paths": {
+      "components/*": [ "components/*" ],
+      "config/*": [ "config/*" ],
+      "img/*": ["img/*"],
+      "store/*": [ "store/*" ],
+      "styles/*": [ "styles/*" ],
+      "utils/*": [ "utils/*" ],
+      "pages/*": [ "pages/*" ],
+      "libs/*": [ "libs/*" ]
+    },
+    "emitDecoratorMetadata": true,
+    "allowUnusedLabels": false,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "pretty": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "dist",
+    "public",
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
+}

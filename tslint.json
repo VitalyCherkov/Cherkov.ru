@@ -1,0 +1,67 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-config-airbnb",
+    "tslint-config-prettier",
+    "tslint-react",
+    "tslint-plugin-prettier"
+  ],
+  "rules": {
+    "array-type": [true, "generic"],
+    "prefer-array-literal": false,
+    "import-name": false,
+    "no-namespace": false,
+    "no-submodule-imports": false,
+    "no-boolean-literal-compare": true,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "no-console": false,
+    "member-access": false,
+    "ban-types": false,
+    "object-literal-sort-keys": false,
+    "jsx-wrap-multiline": false,
+    "no-increment-decrement": false,
+    "member-ordering": false,
+    "variable-name": false,
+    "no-implicit-dependencies": [true, [
+      "components",
+      "config",
+      "img",
+      "store",
+      "styles",
+      "utils",
+      "pages",
+      "libs"
+    ]],
+    "prettier": [true, {
+      "jsxBracketSameLine": false,
+      "bracketSpacing": true,
+      "singleQuote": true,
+      "trailingComma": "es5"
+    }],
+    "ordered-imports": [true, {
+      "grouped-imports": true,
+      "groups": [
+        {
+          "match": "^(components|config|img|store|styles|utils|pages|libs)",
+          "order": 20
+        },
+        {
+          "match": "^[A-Za-z]",
+          "order": 10
+        },
+        {
+          "name": "parent_dir",
+          "match": "^[.][.]",
+          "order": 50
+        },
+        {
+          "name": "current dir",
+          "match": "^[.]",
+          "order": 40
+        },
+        { "match": null, "order": 30 }
+      ]
+    }]
+  }
+}

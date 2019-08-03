@@ -1,0 +1,33 @@
+@import './constants';
+@import './includeMedia';
+
+@mixin square($size, $border-radius: null){
+  width: $size;
+  height: $size;
+
+  @if ($border-radius) {
+    border-radius: $border-radius;
+  }
+}
+
+@mixin simpleText($color: $global-color-dark) {
+  font-size: $global-font-size-m;
+  line-height: 20px;
+  color: $color;
+}
+
+@mixin centeredSimpleText($color: $global-color-dark) {
+  @include simpleText($color);
+  text-align: center;
+}
+
+@mixin bordered {
+  border-radius: 10px;
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
