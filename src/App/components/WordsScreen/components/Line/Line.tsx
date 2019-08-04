@@ -19,7 +19,11 @@ const Line = (props: IProps) => {
 
   const animatedProps = useSpring({
     to: { left: `${offset! * speed!}%` },
-    config: config.gentle,
+    config: {
+      mass: 26,
+      tension: 100,
+      friction: 100,
+    },
   });
 
   return (
